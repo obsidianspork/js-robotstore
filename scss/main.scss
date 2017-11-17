@@ -1,0 +1,186 @@
+/**************
+    Variables
+**************/
+$black: #000000;
+$red: #ff0000;
+$grey: #808080;
+$light-red: #f14040;
+$robot-font: 'Roboto', sans-serif;
+
+@font-face {
+  font-family: 'Roboto';
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/***********
+    Header
+************/
+
+header .searchbox {
+  position: absolute;
+  margin-top: 30px;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+}
+
+.headerlogo img {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+input {
+  outline: none;
+}
+
+.searchbox {
+  border: none;
+}
+
+.fa-search {
+  display: inline;
+}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+	font-family: inherit;
+  font-size: 100%;
+}
+
+nav {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  display: inline;
+  font-size: 10px;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #bb3f3f;
+  text-align: center;
+  padding-right: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  float: inherit;
+  text-align: right;
+}
+
+nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-align: center;
+  transition: .3s background-color;
+}
+
+nav a:hover {
+  background-color: #ff0000;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  nav  li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float 
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
+}
+
+#welcomeimage img {
+  display: block;
+  margin: 0 auto;
+}
+
+section #welcometext header {
+  display: block;
+  margin: 0 auto;
+}
+
+
+#coffeeofthemonth img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#welcometext {
+  -moz-column-width: 40em;
+  -moz-columns: 40em;
+  -webkit-columns: 40em;
+  columns: 40em;
+}
+
+fieldset {
+  border: none;
+}
+
+/***********
+    Footer
+************/
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-flow: column center;
+  background-color: $black;
+  color: $grey;
+  padding-top: 150px;
+}
+
+/* Robots */
+
+// label[for~="robo"] {
+//   font-family: $robot-font;
+// }
