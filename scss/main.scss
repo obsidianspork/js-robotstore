@@ -1,15 +1,23 @@
 /**************
     Variables
 **************/
+
 $black: #000000;
-$red: #ff0000;
-$grey: #808080;
+$red: #bb3f3f;
+$grey: #AAAAAA;
 $light-red: #f14040;
+$white: #fff;
 $robot-font: 'Roboto', sans-serif;
+$roboto-mono: 'Roboto Mono', monospace;
 
 @font-face {
   font-family: 'Roboto';
   @import url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 }
 
 html, body {
@@ -21,45 +29,110 @@ html, body {
     Header
 ************/
 
-header .searchbox {
-  position: absolute;
-  margin-top: 30px;
-  margin-right: 10px;
-  top: 0;
-  right: 0;
-}
-
-.headerlogo img {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  border-radius: 50%;
+div .headerinfo {
   top: 0px;
   left: 0px;
   z-index: 1;
   margin-left: 30px;
   padding-top: 20px;
+  border: none;
+  background-color: none;
+}
+
+.headerlogo img {
+  width: 150px;
+  height: 150px;
+  position: sticky;
+  border-radius: 50%;
+  margin-left: 30px;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+#headername {
+  top: 83px;
+  left: 0px;
+  position: absolute;
+  margin-left: 225px;
+  z-index: 1;
+  font-family: $roboto-mono;
+  font-size: 24px;
 }
 
 input {
   outline: none;
 }
 
-.searchbox {
+header .searchbox {
+  position: absolute;
+  margin-top: 30px;
+  margin-right: 10px;
+  padding-top: 10px;
+  top: 0;
+  right: 0;
   border: none;
+  color: $grey;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  width: 130px;
+  box-sizing: border-box;
+  margin-right: 60px;
+  // border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 10px;
+  background-color: $white;
+  background-position: 10px 10px;
+  // background-repeat: no-repeat;
+  // padding: 12px 20px 12px 40px;
 }
 
+header .searchButton {
+  float: right;
+  margin-top: 40px;
+  margin-right: 25px;
+  border: none;
+  background-color: $white;
+  z-index: 1;
+  position: relative;
+}
+
+// button .fa-search {
+//   border: none;
+
+//   margin-bottom: 100px;
+//   display: inline;
+// }
+
 .fa-search {
-  display: inline;
+  color: $grey;
+  border: none;
+  right: 0;
+  position: absolute;
+  margin-bottom: 100px;
+  margin-right: 25px;
+}
+
+.fa-search:hover {
+  color: $light-red;
+  border: none;
+  transition: color .25s ease-in 0s;
+  cursor: pointer;
+}
+
+header .searchbox:focus {
+  border: $light-red 1px solid;
+  color: $black;
+  width: 25%;
 }
 
 input[type=search] {
 	-webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
   -moz-box-sizing: content-box;
+  box-sizing: content-box;
 	font-family: inherit;
   font-size: 100%;
+  text-indent: 10px;
 }
 
 nav {
@@ -72,7 +145,7 @@ nav {
 
 nav ul {
   list-style: none;
-  background-color: #bb3f3f;
+  background-color: $red;
   text-align: center;
   padding-right: 0;
   margin: 0;
@@ -92,14 +165,14 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: $white;
   display: block;
   text-align: center;
-  transition: .3s background-color;
+  transition: .5s background-color;
 }
 
 nav a:hover {
-  background-color: #ff0000;
+  background-color: $light-red;
 }
 
 nav a.active {
@@ -116,26 +189,11 @@ nav a.active {
     line-height: 50px;
     font-size: 1.4em;
   }
- 
-  /* Option 1 - Display Inline */
+
   nav li {
     display: inline-block;
     margin-right: -4px;
   }
- 
-  /* Options 2 - Float 
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
 }
 
 #welcomeimage img {
@@ -143,9 +201,18 @@ nav a.active {
   margin: 0 auto;
 }
 
-section #welcometext header {
+section {
   display: block;
   margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+}
+
+section header {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
 }
 
 
@@ -155,32 +222,45 @@ section #welcometext header {
   padding-top: 30px;
 }
 
-#welcometext {
-  -moz-column-width: 40em;
-  -moz-columns: 40em;
-  -webkit-columns: 40em;
-  columns: 40em;
+#loremtext {
+  display: block;
+  -moz-column-width: 40em 2;
+  -moz-columns: 40em 2;
+  -webkit-columns: 40em 2;
+  columns: 40em 2;
+  border: 3px solid black;
 }
 
 fieldset {
   border: none;
-}
+} 
 
 /***********
     Footer
 ************/
 
 footer {
-  display: flex;
-  align-items: center;
-  flex-flow: column center;
-  background-color: $black;
+  margin: 50px auto;
+  width: 50%;
+  background-color: inherit;
+  padding-top: 25px;
+  margin-bottom: 1.5em;
+  border-top: 1px solid $light-red;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  text-align: center;
   color: $grey;
-  padding-top: 150px;
 }
 
-/* Robots */
+.mainlink {
+  text-decoration: none;
+}
 
-// label[for~="robo"] {
-//   font-family: $robot-font;
-// }
+.mainlink:hover {
+  color: $light-red;
+}
+
+footer .smalltext {
+  font-size: 12px;
+}
