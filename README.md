@@ -16,17 +16,17 @@
 ## On the Robots Page:
 
 * [x] Remove the default borders around the Robots.
-* [ ] Change the font for all Robots. 
+* [x] Change the font for all Robots. 
 
 ## On the Hardware Page:
 
 * [x] Remove the default borders around the Hardwares.
-* [ ] Change the font for the Hardware.
+* [x] Change the font for the Hardware.
 
 ## On the About Page:
 
-* [ ] Remove the default border around the History Section.
-* [ ] Change the font for the History Section.
+* [x] Remove the default border around the History Section.
+* [x] Change the font for the History Section.
 
 ## On the Contact Page:
 
