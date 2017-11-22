@@ -1,0 +1,321 @@
+/**************
+    Variables
+**************/
+
+$black: #000000;
+$red: #bb3f3f;
+$grey: #AAAAAA;
+$light-red: #f14040;
+$white: #fff;
+$robot-font: 'Roboto', sans-serif;
+$roboto-mono: 'Roboto Mono', monospace;
+
+@font-face {
+  font-family: 'Roboto';
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/***********
+    Header
+************/
+
+div .headerinfo {
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  margin-left: 30px;
+  padding-top: 20px;
+  border: none;
+  background-color: none;
+}
+
+.headerlogo img {
+  width: 150px;
+  height: 150px;
+  position: sticky;
+  border-radius: 50%;
+  margin-left: 30px;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+#headername {
+  top: 83px;
+  left: 0px;
+  position: absolute;
+  margin-left: 225px;
+  z-index: 1;
+  font-family: $roboto-mono;
+  font-size: 24px;
+}
+
+input {
+  outline: none;
+}
+
+header #search-form {
+  position: absolute;
+  margin-top: 30px;
+  margin-right: 10px;
+  padding-top: 10px;
+  top: 0;
+  right: 0;
+  width: 300px;
+  box-sizing: border-box;
+  margin-right: 60px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: $white;
+}
+
+header .searchbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  color: $grey;
+  width: 130px;
+  height: 20px;
+  box-sizing: border-box;
+  margin-right: 60px;
+  border-radius: 0;
+  font-size: 10px;
+  background-color: $white;
+  background-position: 10px 10px;
+}
+
+header .searchbox:focus {
+  border: $light-red 1px solid;
+  color: $black;
+}
+
+.fa-search {
+  color: $grey;
+  border: none;
+  right: 0;  
+}
+
+.searchbox > .btn-search {
+  display: inline-block;
+  margin-left: 250px;
+}
+
+button.fa-search:hover {
+  color: $light-red;
+  border: none;
+  transition: color .25s ease-in 0s;
+  cursor: pointer;
+}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+	font-family: inherit;
+  font-size: 100%;
+  text-indent: 10px;
+}
+
+nav {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  display: inline;
+  font-size: 10px;
+}
+
+nav ul {
+  list-style: none;
+  background-color: $red;
+  text-align: center;
+  padding-right: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  float: inherit;
+  text-align: right;
+}
+
+nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+nav a {
+  text-decoration: none;
+  color: $white;
+  display: block;
+  text-align: center;
+  transition: .5s background-color;
+}
+
+nav a:hover {
+  background-color: $light-red;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  nav  li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+
+/**************
+      Main
+**************/
+
+#welcomeimage img {
+  display: block;
+  margin: 0 auto;
+}
+
+section {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+}
+
+section header {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+#loremtext {
+  display: block;
+  columns: 10em 2;
+  padding: 30px 10px 10px 30px;
+  background-color: $black;
+  color: $grey;
+}
+
+
+#coffeeofthemonth img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+fieldset {
+  margin: 0 auto;
+  border: none;
+  font-family: $robot-font;
+  list-style: none;
+}
+
+
+
+/***********
+   Contact
+************/
+
+#contactForm {
+  // display: flex;
+  // flex-flow: column wrap;
+  // justify-content: center;
+  // align-content: center;
+  // max-width: 50%;
+  // margin-top: 50px;
+
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+input#fullname:focus, input#email:focus, textarea:focus {
+  border: 1px solid $light-red;
+}
+
+// #btnSendInfo {
+//   border-radius: none;
+// }
+
+#btnSendInfo {
+  // border: 3px solid #fff;
+  color: $white;
+  border: 1px solid $black;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 0px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+}
+
+#btnSendInfo:hover {
+  background-color: $light-red;
+  border: none;
+  animation: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  color: $white;
+}
+
+/***********
+    Footer
+************/
+
+footer {
+  margin: 50px auto;
+  width: 50%;
+  background-color: inherit;
+  padding-top: 25px;
+  margin-bottom: 1.5em;
+  border-top: 1px solid $light-red;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  text-align: center;
+  color: $grey;
+}
+
+.mainlink {
+  text-decoration: none;
+}
+
+.mainlink:hover {
+  color: $light-red;
+}
+
+footer .smalltext {
+  font-size: 12px;
+}
