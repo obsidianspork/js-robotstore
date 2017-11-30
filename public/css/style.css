@@ -229,6 +229,9 @@ input#fullname:focus, input#email:focus, textarea:focus {
   -moz-transition: all 0.3s ease-in;
   color: #fff; }
 
+.active {
+  background-color: #fcf700; }
+
 /***********
     Footer
 ************/
