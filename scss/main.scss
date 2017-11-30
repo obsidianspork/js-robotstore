@@ -9,6 +9,7 @@ $light-red: #f14040;
 $white: #fff;
 $robot-font: 'Roboto', sans-serif;
 $roboto-mono: 'Roboto Mono', monospace;
+$yellow: #fcf700;
 
 @font-face {
   font-family: 'Roboto';
@@ -288,6 +289,10 @@ input#fullname:focus, input#email:focus, textarea:focus {
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   color: $white;
+}
+
+.active {
+  background-color: $yellow;
 }
 
 /***********
