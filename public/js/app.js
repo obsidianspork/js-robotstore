@@ -34,6 +34,9 @@ $(document).ready(function() {
     let $cpu = $('input[name="CPU"]:checked').attr('data-name');
     let $ram = $('input[name="ram"]:checked').attr('data-name');
     let $hardware = $('input[name="hardware"]:checked').attr('data-name');
+    if (typeof($hardware) == 'undefined') {
+      $hardware = "No Additonal Hardware selected."
+    }
     console.log(`Selected CPU: ${$cpu}` + "\n" +
                 `Selected RAM: ${$ram}` + "\n" +
                 `Additional Hardware: ${$hardware}`);
