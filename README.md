@@ -37,8 +37,7 @@
 * [x] Highlight the active input on the Contact page to indicate to the user where they are in the form.
 * [x] Add mouse events to highlight Robots and Hardware when the user interacts with them on their respective pages.
 * [x] Remove the alert from the Hardware page, using jQuery capture that data and log it to the console.
-* [ ] Use the search bar to filter the Robots list and what is displayed.
-* [ ] **Bonus**: Add a loading page to the site that is displayed before the user enters the store
+* [x] Use the search bar to filter the Robots list and what is displayed.
 
 # Mr. Robot Store Requirements (part three):
 
