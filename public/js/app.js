@@ -1,13 +1,14 @@
 $(document).ready(function() {
-  let $this = $(this);
 
   // Highlight form inputs
   $("form input").on("focusin", function() {
+    let $this = $(this);
     $this
       .closest("p")
       .addClass("active");
   });
   $("form input").on("focusout", function() {
+    let $this = $(this);
     $this
       .closest("p")
       .removeClass("active");
@@ -15,16 +16,20 @@ $(document).ready(function() {
 
   // Highlight Robots and Hardware on hover
   $("fieldset li").on('mouseenter', function() {
+    let $this = $(this);
     $this.addClass("active");
   });
   $("fieldset li").on('mouseleave', function() {
+    let $this = $(this);
     $this.removeClass("active");
   });
 
   $("fieldset p").on('mouseenter', function() {
+    let $this = $(this);
     $this.addClass("active");
   });
   $("fieldset p").on('mouseleave', function() {
+    let $this = $(this);
     $this.removeClass("active");
   });
   
@@ -40,5 +45,17 @@ $(document).ready(function() {
     console.log(`Selected CPU: ${$cpu}` + "\n" +
                 `Selected RAM: ${$ram}` + "\n" +
                 `Additional Hardware: ${$hardware}`);
+  });
+  
+  // Autocomplete searchbox
+  $(function() {
+    let $this = $(this);
+    let $tags = $("h4").each(function(e) {
+       return $this.text();
+    });
+
+    $(".searchbox").autocomplete({
+      source: $tags
+    });
   });
 });
