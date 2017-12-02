@@ -32,3 +32,9 @@
 
 * [x] Style your contact form to match the rest of the site.
 
+# Mr. Robot Store Requirements (part three):
+
+* [x] Convert your Navbar to a Bootstrap Navabar
+* [x] Add a collapsible Navbar for using in Mobile and Tablet devices
+* [x] Make your site Responsive by implementing the Bootstrap Grid System.
+* [x] Make your Robots into Thumbnails with captions that contain the information given to you in the HTML.
