@@ -157,9 +157,8 @@ nav a.active {
 /**************
       Main
 **************/
-#welcomeimage img {
-  display: block;
-  margin: 0 auto; }
+.img-circle img {
+  padding-bottom: 10px; }
 
 section {
   margin: 0 auto;
@@ -228,6 +227,9 @@ input#fullname:focus, input#email:focus, textarea:focus {
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   color: #fff; }
+
+.active {
+  background-color: #fcf700; }
 
 /***********
     Footer

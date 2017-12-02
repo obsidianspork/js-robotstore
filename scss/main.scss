@@ -9,6 +9,7 @@ $light-red: #f14040;
 $white: #fff;
 $robot-font: 'Roboto', sans-serif;
 $roboto-mono: 'Roboto Mono', monospace;
+$yellow: #fcf700;
 
 @font-face {
   font-family: 'Roboto';
@@ -192,9 +193,8 @@ nav a.active {
       Main
 **************/
 
-#welcomeimage img {
-  display: block;
-  margin: 0 auto;
+.img-circle img {
+  padding-bottom: 10px;
 }
 
 section {
@@ -288,6 +288,10 @@ input#fullname:focus, input#email:focus, textarea:focus {
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   color: $white;
+}
+
+.active {
+  background-color: $yellow;
 }
 
 /***********
