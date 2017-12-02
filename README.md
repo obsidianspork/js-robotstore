@@ -1,4 +1,4 @@
-# Mr. Robot Store Requirements:
+# Mr. Robot Store Requirements (part one):
 
 ## Across All pages:
 
@@ -32,9 +32,19 @@
 
 * [x] Style your contact form to match the rest of the site.
 
+<<<<<<< HEAD
 # Mr. Robot Store Requirements (part three):
 
 * [x] Convert your Navbar to a Bootstrap Navabar
 * [x] Add a collapsible Navbar for using in Mobile and Tablet devices
 * [x] Make your site Responsive by implementing the Bootstrap Grid System.
 * [x] Make your Robots into Thumbnails with captions that contain the information given to you in the HTML.
+=======
+# Mr. Robot Store Requirements (part two):
+
+* [x] Highlight the active input on the Contact page to indicate to the user where they are in the form.
+* [x] Add mouse events to highlight Robots and Hardware when the user interacts with them on their respective pages.
+* [x] Remove the alert from the Hardware page, using jQuery capture that data and log it to the console.
+* [ ] Use the search bar to filter the Robots list and what is displayed.
+* [ ] **Bonus**: Add a loading page to the site that is displayed before the user enters the store
+>>>>>>> 47afaea9b39835687af28bfbb2776bef3e0a6610
